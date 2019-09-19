@@ -12,108 +12,7 @@
 
     <link rel="stylesheet" href="/static/flickity.min.css">
 
-<style type="text/css">
-    .box {
-  width: 70%;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.2);
-  padding: 35px;
-  /*border: 2px solid #fff;
-  border-radius: 20px/50px;*/
-  background-clip: padding-box;
-  text-align: center;
-  text-decoration: none;
-}
-
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  background-color: #858796;
-  border: 1px solid;
-  border-radius: .35rem;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.button:hover {
-  color: #fff;
-  background-color: #717384;
-  border-color: #6b6d7d;
-  text-decoration: none;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 40%;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-.popup .close:hover {
-  color: #06D85F;
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-  margin-right: 10%;
-  margin-left: 10%;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-@media screen and (max-width: 700px){
-  .box{
-    width: 80%;
-  }
-  .popup{
-    width: 80%;
-  }
-}
-</style>
-
-
-
-
-
-
-    <main>
+    <main style="margin-top:68px;">
         <div id="homeCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
@@ -186,7 +85,7 @@ a:hover {
 
         <div  id=features>
             <div class="container marketing w-85">
-            <div class="row" style="padding-top:8rem;">
+            <div class="row" style="padding-top:3rem;">
                 <div class="col-lg-4">
                     <img class="marketing-pics" src="/static/img/home/svg/voice-message.svg" alt="Voice analysis" width="100" height="100">
                     <h2>Call Analysis</h2>
@@ -325,11 +224,11 @@ a:hover {
         </div>
         </div>
 
-        <div class="main-carousel"  style="margin: 8vw 2vw 1vw 2vw;; padding-bottom: 20px;">
+        <div class="main-carousel"  style="margin: 1vw 2vw 1vw 2vw;; padding-bottom: 20px;">
             <div class="carousel-cell">
               <div class="card-img-top-250">
                   <a href="https://medium.com/@merylldin/project-aster-ibm-call-for-code-30d959614be7" target="_blank">
-                  <img class="w-100" src="/static/img/home/article_medium.png" style="height: 300px;  margin-top: 0px;" alt="Carousel 1"></a>
+                  <img class="w-100" src="/static/img/home/article_medium.PNG" style="height: 300px;  margin-top: 0px;" alt="Carousel 1"></a>
               </div>
               <div class="card-body1">
                     <h2 class="featurette-heading" style="margin-top: 0px;">Ingenuity leading to a pilot</h2>
@@ -366,7 +265,7 @@ a:hover {
             </div>
             <div class="carousel-cell">
                <div class="card-img-top-250">
-                  <img class="w-100" src="/static/img/home/dispatch_center.jpg"  style="height: 300px;  margin-top: 0px;" alt="Dispatch center"></a>
+                  <img class="w-100" src="/static/img/home/dispatch_center.JPG"  style="height: 300px;  margin-top: 0px;" alt="Dispatch center"></a>
               </div>
               <div class="card-body1">
                 <h2 class="featurette-heading" style="margin-top: 0px;">Emergency services, a matter of priorities</h2>
@@ -428,7 +327,7 @@ a:hover {
                         <div class="container-marketing">
                             <div class="row">
                                 
-                                <div class="col-md-10 col-centered" style="padding: 0;flex: 100%;">
+                                <div class="col-md-10 col-centered">
                                     <form action="{{ url_for('index') }}" method=post name="contact" role="form">
                                         <div class="ml-form mb-4 ">
                                             {{ form.name(class="form-control", placeholder="Your name", **{'data-validation':'required'}) }}
