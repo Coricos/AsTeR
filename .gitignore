@@ -3,7 +3,10 @@
 # Project: AsTeR
 
 # Compiled files
-
+bin/
+lib/
+share/
+include/
 process/__pycache__/
 .ipynb_checkpoints/
 
