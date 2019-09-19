@@ -191,3 +191,10 @@ h2.featurette-heading {
   font-size: 20px;
 }
 }
+
+@media (max-width: 700px) {
+  .carousel-cell {
+  width: 80%;
+  height: 700px;
+}
+}
