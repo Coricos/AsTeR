@@ -1,14 +1,12 @@
-
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
 body {
-  height: auto;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 0rem;
-  color: #5a5a5a;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    color: #5a5a5a;
 }
 
 main {
@@ -20,180 +18,169 @@ main {
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 0rem;
-  width:100%;
-  margin:auto;
-  height:100%;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    background: #EEE;
 }
 
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-  color: #ffffff;
+    bottom: 3rem;
+    z-index: 10;
+    color: #ffffff;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  width:100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .carousel-item > img {
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  position: relative;
-  top: 0;
-  left: 0px;
-  height: auto;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  background-size:100% 100%;
-  background-repeat: no-repeat;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
-.btn .btn-youtube{
-     border: none;
-     color: grey;
-     padding: 12px 16px;
-     font-size: 16px;
-     cursor: pointer;
- }
+.btn .btn-youtube {
+    border: none;
+    color: grey;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
- .btn:before .btn-youtube{
-   content: url(/static/img/home/svg/youtube.svg);
-   width: 20px;
-   float: left;
-   margin-right: 5px;
-   margin-top: -2px;
- }
+.btn:before .btn-youtube {
+    content: url(/static/img/home/svg/youtube.svg);
+    width: 20px;
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
-  margin-bottom: 1.5rem;
-  text-align: center;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
+
 .marketing h2 {
-  font-weight: 400;
+    font-weight: 400;
 }
+
 .marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
+    margin-right: .75rem;
+    margin-left: .75rem;
 }
+
 .marketing .col-lg-4 .marketing-pics {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* Featurettes
 ------------------------- */
-
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -.05rem;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
 }
-
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (max-width: 550px) {
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
+@media (max-width: 700px) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
 
-.carousel-item {
-  width:100%;
-  height: auto;
-}
+    .carousel-item {
+        width: 100%;
+        height: auto;
+    }
 
-  .featurette-heading {
-    font-size: 50px;
-  }
-}
+    .featurette-heading {
+        font-size: 50px;
+        margin-top: 1rem;
+    }
+    .carousel-cell {
+        width: 80%;
+        height: 700px;
+    }
 
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 1rem;
-  }
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        color: #5a5a5a;
+    }
 }
 
 .card-body {
-  padding-bottom: 3rem;
-  background-color: #f8f9fd;
-  border-radius: 20px;
+    padding-bottom: 3rem;
+    background-color: #f8f9fd;
+    border-radius: 20px;
 }
-
 
 .vcenter {
     display: flex;
     align-items: center;
 }
 
-
 /* control image height */
 .card-img-top-250 {
     max-height: 300px;
-    overflow:hidden;
+    overflow: hidden;
     border-radius: 5px;
 }
 
-.card-body1 {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 1.25rem;
-  }
-
-.carousel {
-  background: #EEE;
-}
-
 .carousel-cell {
-  width: 40%;
-  height: 600px;
-  margin-right: 10px;
-  background: #f5f5f5;
-  background-clip: border-box;
-  border: 2px solid rgba(0,0,0,.125);
-  border-radius: 5px;
-  counter-increment: carousel-cell;
+    width: 40%;
+    height: 600px;
+    background: #f5f5f5;
+    background-clip: border-box;
+    border: 2px solid rgba(0, 0, 0, .125);
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+    margin-right: 20px;
+    overflow: hidden;
 }
 
-@media (max-width: 700px) {
-.carousel-cell {
-  width: 80%;
-  height: 650px;
-  }
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 0rem;
-  color: #5a5a5a;
-}
-h2.featurette-heading {
-  font-size: 20px;
-}
+.main-carousel {
+    margin: 1vw 10vw 1vw 10vw;
 }
 
-@media (max-width: 700px) {
-  .carousel-cell {
-  width: 80%;
-  height: 700px;
+* {
+    box-sizing: border-box;
 }
+
+.carousel-cell img {
+    display: block;
+    height: 200px;
+}
+
+@media screen and ( min-width: 768px ) {
+    .carousel-cell img {
+        height: 400px;
+    }
 }

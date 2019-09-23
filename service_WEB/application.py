@@ -51,8 +51,8 @@ def index():
         if form.validate() == False:
             return render_template('home.html', form=form)
         else:
-            msg = Message(subject=form.subject.data, sender='aster0project@gmail.com',
-                          recipients=['aster0project@gmail.com'])
+            msg = Message(subject=form.subject.data, sender=form.email.data,
+                          recipients=['aster.messages@gmail.com'])
             msg.body = """
                 From: %s 
                 <%s>
