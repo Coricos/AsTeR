@@ -11,7 +11,6 @@ SQL_URL = crd['sql_api']
 NLP_URL = crd['nlp_api']
 API_KEY = crd['api_key']
 # THMBL_KEY = crd["thumbalizr_key"]
-THMBL_KEY = "8trFHW38YZ9imMF6lGskzJ6Mdys"
 MAIL_PASSWORD = crd['mail_password']
 
 # Secure application
