@@ -10,7 +10,7 @@ with open('configs/config.yaml') as raw: crd = yaml.safe_load(raw)
 SQL_URL = crd['sql_api']
 NLP_URL = crd['nlp_api']
 API_KEY = crd['api_key']
-# THMBL_KEY = crd["thumbalizr_key"]
+THMBL_KEY = crd["thmblr_key"]
 MAIL_PASSWORD = crd['mail_password']
 
 # Secure application
