@@ -1,19 +1,19 @@
-{%  extends 'layout.html' %}
+{% extends 'layout.html' %}
 
 
-{% block body%}
+{% block body %}
     <script src="/static/includes/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/static/includes/jquery.fancybox.min.js"></script>
-    <script src="/static/includes/flickity.pkgd.min.js"></script>
+    <script src="/static/includes/flickity.pkgd.js"></script>
     <link href="/static/contact.css" rel="stylesheet">
     <link href="/static/home.css" rel="stylesheet">
-    <!-- <link href="/static/popup.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="static/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/static/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/static/flickity.css">
 
-    <link rel="stylesheet" href="/static/flickity.min.css">
-
-    <main style="margin-top:8px;">
-        <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+    <main>
+        <!-- Introduction Carousel
+        ================================================== -->
+        <div id="IntroCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#homeCarousel" data-slide-to="1"></li>
@@ -23,17 +23,21 @@
             <div class="carousel-inner">
                 <div class="active carousel-item">
                     <picture>
-                        <source media="(min-width: 900px)" srcset="/static/img/home/wildfire_desktop.jpg" style="height: 100%">
+                        <source media="(min-width: 900px)" srcset="/static/img/home/wildfire_desktop.jpg"
+                                style="height: 100%">
                         <source media="(min-width: 550px)" srcset="/static/img/home/wildfire_tablet.jpg">
-                        <img class="first-slide" class="d-block w-80" src="/static/img/home/wildfire_phone.jpg"
-                             style="width: 100%;" alt="Wild Fire">
+                        <img class="first-slide d-block w-80" src="/static/img/home/wildfire_phone.jpg"
+                             style="width: 100%;" alt="Wild Fire" width="414" height="590">
                     </picture>
                     <div class="container">
                         <div class="carousel-caption text-left">
                             <div class="btn-play-wrap mx-auto">
                                 <h1>Time matters.</h1>
                                 <p>AsTeR aims at supporting emergency services from the call to the survivor.</p>
-                                <p><a class="btn btn-lg btn-primary" href="https://youtu.be/_SBBrj9y26M" data-fancybox class="btn-play" role="button"><i class="fa fa-youtube-play"></i> Watch Demo</a></p>
+                                <p><a class="btn btn-lg btn-primary btn-play" href="https://youtu.be/_SBBrj9y26M"
+                                      data-fancybox
+                                      role="button"><i class="fa fa-youtube-play"></i> Watch Demo</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -41,14 +45,18 @@
 
                 <div class="carousel-item">
                     <picture>
-                        <source media="(min-width: 900px)" srcset="/static/img/home/modularity_desktop_1.jpg" style="height: 100%;">
-                        <source media="(min-width: 550px)" srcset="/static/img/home/modularity_tablet_1.jpg" style="width: 100%;">
-                        <img class="second-slide" class="d-block w-80" src="/static/img/home/modularity_phone.jpg" style="width: 100%" alt="modularity">
+                        <source media="(min-width: 900px)" srcset="/static/img/home/modularity_desktop_1.jpg"
+                                style="height: 100%;">
+                        <source media="(min-width: 550px)" srcset="/static/img/home/modularity_tablet_1.jpg"
+                                style="width: 100%;">
+                        <img class="second-slide d-block w-80" src="/static/img/home/modularity_phone.jpg"
+                             style="width: 100%" alt="modularity">
                     </picture>
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>Focus on modularity.</h1>
-                            <p>AsTeR's development was focused on modules. It can be integrated to virtually any emergency platorm already deployed.</p>
+                            <p>AsTeR's was developed with modularity in mind. It can be integrated to any
+                                emergency platform already deployed.</p>
                             <p><a class="btn btn-lg btn-primary" href="#features" role="button">Learn more</a></p>
                         </div>
                     </div>
@@ -56,319 +64,313 @@
 
                 <div class="carousel-item">
                     <picture>
-                        <source media="(min-width: 900px)" srcset="/static/img/home/bulb_desktop_1.jpg" style="height: 100%;">
-                        <source media="(min-width: 550px)" srcset="/static/img/home/bulb_tablet.jpg" style="width: 100%;">
-                        <img class="third-slide" class="d-block w-80" src="/static/img/home/bulb_phone.jpg" style="width: 100%;" alt="smart">
+                        <source media="(min-width: 900px)" srcset="/static/img/home/bulb_desktop_1.jpg"
+                                style="height: 100%;">
+                        <source media="(min-width: 550px)" srcset="/static/img/home/bulb_tablet.jpg"
+                                style="width: 100%;">
+                        <img class="third-slide d-block w-80" src="/static/img/home/bulb_phone.jpg"
+                             style="width: 100%;" alt="smart">
                     </picture>
                     <div class="container">
                         <div class="carousel-caption text-right">
                             <h1>AsTeR is not only intuitive. It is smart. </h1>
-                            <p>Built to be autonomous, Aster will recognize your actions so that feedback can be shared with never more than one screen touch. </p>
+                            <p>Built to be autonomous, Aster will recognize your actions so that feedback can be shared
+                                with never more than one screen touch. </p>
                             <p><a class="btn btn-lg btn-primary" href="#features" role="button">Discover</a></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+
+            <a class="carousel-control-prev" href="#IntroCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+
+            <a class="carousel-control-next" href="#IntroCarousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
 
-
-        <!-- Marketing messaging
+        <!-- AsTeR Features
         ================================================== -->
-
-        <div id=features style="padding-top: 10rem;">
-            <div class="container marketing w-85">
-            <div class="row" style="padding-top:3rem;">
-                <div class="col-lg-4">
-                    <img class="marketing-pics" src="/static/img/home/svg/voice-message.svg" alt="Voice analysis" width="100" height="100">
-                    <h2>Call Analysis</h2>
-                    <p>Calls are analyzed in real time through latest NLP technologies to extract relevant information and evaluate the urgency of the required intervention. </p>
-                    <p><a class="btn btn-secondary" data-toggle="collapse" href="#multiCollapse1" role="button" aria-expanded="false" aria-controls="multiCollapse1">View details &raquo;</a></p>
-                </div>
-
-                <div class="col-lg-4">
-                    <img class="marketing-pics" src="/static/img/home/svg/route.svg" alt="Navigation" width="100" height="100">
-                    <h2>Unit Dispatching</h2>
-                    <p>Using Djikstra algorithms, emergency units are dispatched in the most efficient way possible. Emergencies are when time is the most valuable. </p>
-                    <p><button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#multiCollapse2" aria-expanded="false" aria-controls="multiCollapse2">View details &raquo;</button></p>
-                </div>
-
-                <div class="col-lg-4">
-                    <img class="marketing-pics" src="/static/img/home/svg/telemarketer.svg" alt="Feedback" width="100" height="100">
-                    <h2>Smart Feedback</h2>
-                    <p>With AsTeR, all communication is integrated, intuitive and smart. AsTeR allows sharing new information from and to the dispatching center in just one touch. </p>
-                    <p><a class="btn btn-secondary" data-toggle="collapse" href="#multiCollapse3" role="button" aria-expanded="false" aria-controls="multiCollapse3">View details &raquo;</a></p>
-                </div>
-
-                <div class="row" id='collapse'>
-                    <div class="collapse multi-collapse" id="multiCollapse1" data-parent='#collapse'>
-                        <div class="card card-body container-marketing d-flex flex-column text-center">
-                            <h1 class="cover-heading">Call Analysis</h1>
-                            <p> </p>
-                            <p >The AsTeR experience begins with the analysis of emergency calls to 911. We are using AI to understand
-                                the calls and process our prioritization algorithm. </p>
-                            <div class="row featurette">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-3 vcenter">
-                                    <p>Through speech-to-text technology of IBM Watson, we extract all the words in a conversation
-                                        with their timing.</p>
-                                </div>
-                                <div class="col-md-1"></div>
-                                <div class="col-md-5"> 
-                                    <!-- <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width=80% height=80% src="/static/img/about/analyzed_call_square_900900.jpg" > -->
-                                    <video width=100% height=100% controls >
-                                      <source src="/static/img/call_resized.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                    </video>
-                                <div class="col-md-1"></div>
-                                </div>
-                            </div>
-                            </br>
-                            <div class="row featurette">
-                                <div class="col-md-1 order-md-1"></div>
-                                <div class="col-md-5 order-md-2">
-                                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width=80% height=80% src="/static/img/home/KeyWordExtraction_HighLevel.png">
-                                </div>
-                                <div class="col-md-1 order-md-3 "></div>
-                                <div class="col-md-3 order-md-4 vcenter">
-                                    </br><p>Use of NLP models to collect, analyze and prioritize information during natural disasters.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse multi-collapse" id="multiCollapse2" data-parent='#collapse'>
-                        <div class="card card-body container-marketing d-flex flex-column text-center">
-                            <h1 class="cover-heading" align="center">Unit Dispatching</h1>
-                            <p> </p>
-                            <p> AsTeR is made to help the firefighters and the emergency forces on the ground. By leading them
-                                with the most efficient way, the rescues can be processed easily and even more securely than previously.</p>
-                            <p> The dispatching at AsTeR is build with Djikstra algorithms providing the faster trajectories from
-                                the current location of the unit to the destination. The trajectories can be update in real time if the unit want it
-                                or of new information appear in our database.</p>
-                            <p> The units are sharing their location in real time, which will give us a way to manage the different
-                                units on a specific area. After natural disasters, the efficiency of emergency services is possible if everyone have
-                                the right information. AsTeR provide a convenient solution to manage a lot of units in the time during crisis. </p>
-                        </div>
-                    </div>
-                    <div class="collapse multi-collapse" id="multiCollapse3" data-parent='#collapse'>
-                        <div class="card card-body container-marketing d-flex flex-column text-center">
-                            <h1 class="cover-heading" align="center">Feedback Integration</h1>
-                            <p>The AsTeR experience provides a tool to help the units on the ground to inform about the situation.
-                                Through an app, they have just to spend few seconds to send the relevant information. </p>
-                            <p>The app has been created from the perspective of a firefighter. The use of the radio can be reinforced by
-                                our aggregator of information. We listed several situations which have to be communicate as quickly as possible:</p>
-                            <div class="row featurette vcenter">
-                                <div class="col-md-1"></div>
-                                <div class="col-md-5">
-                                    <b>Blocked routes:</b>
-                                    <p>When a truck can't go further or see a blocked route in the area, the information is immediately
-                                    aggregate to change the trajectories of next trucks. We are focusing mainly on the natural disaster which could
-                                    create some damages on the routes used for emergency.</p>
-                                </div>
-                                <div class="col-md-1"></div>
-                                <div class="col-md-4">
-                                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/static/img/features/blocked_route.jpg">
-                                </div>
-                            </div>
-                            <hr class="featurette-divider">
-                            <div class="row featurette vcenter">
-                                <div class="col-md-5 order-md-4">
-                                    <b>Danger in the area:</b>
-                                    <p>When the unit using the app is victim or see a danger in the area. The current location will
-                                    be immediately saved in our database and will affect all the trajectories for other units.</p>
-                                </div>
-                                <div class="col-md-1 order-md-3"></div>
-                                <div class="col-md-5 order-md-2">
-                                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" src="/static/img/features/danger.jpg">
-                                </div>
-                            </div>
-                            <hr class="featurette-divider">
-                            <div class="row featurette vcenter">
-                                <div class="col-md-5">
-                                    <b>New victims:</b>
-                                    <p>When the unit find a new victim during the operation. They could click the button and if they have
-                                    more time, the unit can save the personal information of the victim to be faster with the coordination between
-                                    emergency services.</p>
-                                </div>
-                                <div class="col-md-1"></div>
-                                <div class="col-md-5">
-                                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/static/img/features/new_victims.jpg">
-                                </div>
-                            </div>
-                            <hr class="featurette-divider">
-                            <div class="row featurette vcenter">
-                                <div class="col-md-6 order-md-4">
-                                    <b>Image classification:</b>
-                                    <p>Pictures taken on the field by the rescue team. By passing them through image
-                                    classification, encountered problems are automatically detected. It allows us to update
-                                    the dispatching map (graph) in real-time, which is exploited via a Dijkstra algorithm for
-                                    optimal trajectories determination.</p>
-                                </div>
-                                <div class="col-md-5 order-md-2">
-                                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="250" height="250" src="/static/img/about/picture_classification.png">
-                                </div>
-                            </div>
-                            <footer class="container" >
-                                <p class="float-right"><a href="#features">Back to the features</a></p>
-                            </footer>
-                    </div>
-                </div>
+        <div id=features class="container marketing w-85" style="padding-top:3rem;">
+            <div class="col-lg-4">
+                <img class="marketing-pics" src="/static/img/home/svg/voice-message.svg" alt="Voice analysis"
+                     width="100" height="100">
+                <h2>Call Analysis</h2>
+                <p>Calls are analyzed in real time through latest NLP technologies to extract relevant
+                    information and evaluate the urgency of the required intervention. </p>
+                <p><a class="btn btn-secondary" data-toggle="collapse" href="#multiCollapse1" role="button"
+                      aria-expanded="false" aria-controls="multiCollapse1">View details &raquo;</a></p>
             </div>
-        </div>
-        </div>
 
-        <div class="main-carousel"  style="margin: 1vw 2vw 1vw 2vw; padding-top: 10rem; padding-bottom: 20px;">
-            <div class="carousel-cell">
-              <div class="card-img-top-250">
-                  <a href="https://medium.com/@merylldin/project-aster-ibm-call-for-code-30d959614be7" target="_blank">
-                  <img class="w-100" src="/static/img/home/article_medium.png" style="height: 300px;  margin-top: 0px;" alt="Carousel 1"></a>
-              </div>
-              <div class="card-body1">
-                    <h2 class="featurette-heading" style="margin-top: 0px;">Ingenuity leading to a pilot</h2>
-                    <h2 class="featurette-heading" style="margin-top: 0px;"><span class="text-muted">AsTeR: a functional service</span></h2>
-                  <p>The project is introduced by Meryll Dindin in this <a href="https://medium.com/@merylldin/project-aster-ibm-call-for-code-30d959614be7" target="_blank">article</a>. He identifies the problem and provides the technical information of our solutions. With schematics, we can understand easily the architecture of our platforms between the user, the databases and the algorithms. The article can be seen as the best explanation of what we do.
+            <div class="col-lg-4">
+                <img class="marketing-pics" src="/static/img/home/svg/route.svg" alt="Navigation" width="100"
+                     height="100">
+                <h2>Unit Dispatching</h2>
+                <p>Using Djikstra algorithms, emergency units are dispatched in the most efficient way possible.
+                    Emergencies are when time is the most valuable. </p>
+                <p>
+                    <button class="btn btn-secondary" type="button" data-toggle="collapse"
+                            data-target="#multiCollapse2" aria-expanded="false" aria-controls="multiCollapse2">
+                        View details &raquo;
+                    </button>
                 </p>
-              </div>
-
-            </div>
-            <div class="carousel-cell">
-              <div class="card-img-top-250">
-                  <a href="https://cta.tech/News/Blog/Articles/2019/May/These-Berkeley-College-Students-Are-Using-Artifici.aspx" target="_blank">
-                  <img class="w-100" style="height: 300px;" src="/static/img/about/cta_article_2.png"  alt="Carousel 2"></a>
-              </div>
-              <div class="card-body1">
-                    <h2 class="featurette-heading" style="margin-top: 0px; ">They are talking about us</h2>
-                    <h2 class="featurette-heading" style="margin-top: 0px; text-align: left;" ><span class="text-muted">AsTeR: the future is here</span></h2>
-                  <p>The<a href="https://cta.tech/News/Blog/Articles/2019/May/These-Berkeley-College-Students-Are-Using-Artifici.aspx" target="_blank">
-                  article written by the Consumer Technology Association (CTA)
-                  </a> about the vision of AsTeR to help the emergency services and the people during natural disasters. The experience of Thomas Galeon as firefighters is related as the basis of our idea exploration and our project is now more focused on collecting and prioritizing information to facilitate decision making during natural disasters.  </p>
-              </div>
             </div>
 
-
-            <div class="carousel-cell">
-              <div class="card-img-top-250">
-                  <img class="w-100" src="/static/img/home/natural-disasters-by-type_resized.png" style="height: 300px;border-top-left-radius: 5px; border-top-right-radius:5px; margin-top: 0px;" alt="Carousel 3"></a>
-              </div>
-              <div class="card-body1">
-                    <h2 class="featurette-heading" style="margin-top: 0px;">Response after a Natural Disaster</h2>
-                    <h2 class="featurette-heading" style="margin-top: 0px;" ><span class="text-muted">AsTeR: a powerful solution</span></h2>
-                    <p>Climate change had made extreme weather events more intense and more long-lived. (Independent, 2017, UK)</p>
-              </div>
+            <div class="col-lg-4">
+                <img class="marketing-pics" src="/static/img/home/svg/telemarketer.svg" alt="Feedback"
+                     width="100" height="100">
+                <h2>Smart Feedback</h2>
+                <p>With AsTeR, all communication is integrated, intuitive and smart. AsTeR allows sharing new
+                    information from and to the dispatching center in just one touch. </p>
+                <p><a class="btn btn-secondary" data-toggle="collapse" href="#multiCollapse3" role="button"
+                      aria-expanded="false" aria-controls="multiCollapse3">View details &raquo;</a></p>
             </div>
-            <div class="carousel-cell">
-               <div class="card-img-top-250">
-                  <img class="w-100" src="/static/img/home/dispatch_center.jpg"  style="height: 300px;  margin-top: 0px;" alt="Dispatch center"></a>
-              </div>
-              <div class="card-body1">
-                <h2 class="featurette-heading" style="margin-top: 0px;">Emergency services, a matter of priorities</h2>
-                <h2 class="featurette-heading" style="margin-top: 0px;" ><span class="text-muted">AsTeR: a responsive tool</span></h2>
-                <p>Interviews and fields studies give our team the needs and the means to have an impact.</p>
-                  
 
-              </div>
-            </div>
-          </div>
-        <br>
-          <hr>
-
-
-<!-- CONTACT -->
-        <div class="box" style="width: 60%;">
-            <div class="container-marketing">
-                <div class="row">
-                    <div class="col-md-4 col-centered">
-                        <img src="/static/img/contact/marker_1.png" width="45" height="45">
-                        <p>San Francisco, CA, USA</p>
-                    </div>
-                    <div class="col-md-4 col-centered" style="margin-top: 30px; margin-bottom: 50px;">
-                        
-                    <a class="button" href="#popup1">Contact Us</a>
-                       
-                    </div>
-                    <div class="col-md-4 col-centered">
-                        <img src="/static/img/contact/enveloppe.png" width="45" height="45">
-                        <p>aster.messages@gmail.com</p>
+            <div class="feature-explanation-container" id='collapse'>
+                <div class="collapse multi-collapse" id="multiCollapse1" data-parent='#collapse'>
+                    <div class="card card-body container-marketing d-flex flex-column text-center">
+                        <h1 class="cover-heading">Call Analysis</h1>
+                        <p>The AsTeR experience begins with the analysis of emergency calls to 911. We use
+                            IBM Watson speech-to-text technology and start-of-the-art artificial intelligence to
+                            turn oral calls into text and compute a priority score. </p>
+                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                             width=80% height=80% src="/static/img/home/KeyWordExtraction_HighLevel.png" alt="">
+                        <video width=100% height=100% controls style="padding-top: 20px;">
+                            <source src="/static/img/call_resized.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="collapse multi-collapse" id="multiCollapse2" data-parent='#collapse'>
+                    <div class="card card-body container-marketing d-flex flex-column text-center">
+                        <h1 class="cover-heading" align="center">Unit Dispatching</h1>
+                        <p> AsTeR was designed to help and support firefighters and emergency teams in the field.
+                            By leading them in the most efficient way, the mission of help responders can be
+                            carried on even more securely than before.</p>
+                        <p> The dispatching routes provided by AsTeR are built using so-called "Djikstra
+                            algorithms".
+                            These are efficient ways of computing optimal trajectories from one location to another.
+                            The trajectories can be updated in real time to continuously support the dispatched
+                            team,
+                            even in the most difficult situations. </p>
+                        <p> Units also share their location in real time. This allows call centers to quickly
+                            visualise
+                            both overlaps and gaps in terms of help responder coverage. </p>
+                    </div>
+                </div>
+                <div class="collapse multi-collapse" id="multiCollapse3" data-parent='#collapse'>
+                    <div class="card card-body container-marketing d-flex flex-column text-center">
+                        <h1 class="cover-heading" align="center">Smart Feedback</h1>
+                        <p>AsTeR ensures that dispatched teams and call centers communicate as quickly and as
+                            efficiently as possible. Most of the information sent back to the call centers is
+                            generated automatically -- first responders are only asked to confirm it.
 
-        <div id="popup1" class="overlay">
-            <div class="popup">
-                <a class="close" href="#home">&times;</a>
-            <div class="content">
-<!-- CONTACT POPUP-->
-                <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center" align="justify">
-
-                    <h1 class="cover-heading text-center" style="margin-bottom: 20px;">Contact Us</h1>
-
-                    {% for message in form.name.errors %}
-                        <div class="flash">{{ message }}</div>
-                    {% endfor %}
-                    {% for message in form.email.errors %}
-                        <div class="flash">{{ message }}</div>
-                    {% endfor %}
-                    {% for message in form.subject.errors %}
-                        <div class="flash">{{ message }}</div>
-                    {% endfor %}
-                    {% for message in form.message.errors %}
-                        <div class="flash">{{ message }}</div>
-                    {% endfor %}
-
-                    <div class="container-marketing">
-                        <div class="container-marketing">
-                            <div class="row">
-                                
-                                <div class="col-md-10 col-centered">
-                                    <form action="{{ url_for('index') }}" method=post name="contact" role="form">
-                                        <div class="ml-form mb-4 ">
-                                            {{ form.name(class="form-control", placeholder="Your name", **{'data-validation':'required'}) }}
-                                        </div>
-                                        <div class="md-form mb-4">
-                                            {{ form.email(class="form-control", placeholder="Your email address", **{'data-validation':'required'}) }}
-                                        </div>
-                                        <div class="md-form mb-4">
-                                            {{ form.subject(class="form-control", placeholder="Subject ", **{'data-validation':'required'}) }}
-                                        </div>
-                                        <div class="md-form mb-4">
-                                            {{ form.message(class="form-control", placeholder="Write your message here! Surprise us!", **{'data-validation':'required'}) }}
-                                        </div >
-                                        <div class="mt-4">
-                                            {{ form.submit(class='btn btn-success') }}
-                                        </div >
-
-                                    </form>
-                                </div>
+                            Here are a few of the critical situations in which AsTeR will prove to be a game changer
+                            :</p>
+                        <div class="row vcenter">
+                            <div class="col-md-5 offset-md-1">
+                                <b>Blocked routes</b>
+                                <p>In the event where an emergency vehicle encounters an obstacle on the road, the
+                                    information is immediately sent back to AsTeR's database and all other vehicle
+                                    trajectories are updated to avoid the obstruction.
+                                </p>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                     src="/static/img/features/blocked_route.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="row featurette vcenter">
+                            <div class="col-md-5 offset-md-1">
+                                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                     src="/static/img/features/new_victims.jpg">
+                            </div>
+                            <div class="col-md-5">
+                                <b>New victims</b>
+                                <p>Deployed units have the possibility to immediately notify the call center
+                                    if they come across an additional victim. The location will be saved in the
+                                    database and shared with all other units.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row featurette vcenter">
+                            <div class="col-md-5 offset-md-1">
+                                <b>Image classification</b>
+                                <p>First responders have the possibility to automatically share pictures taken on
+                                    the field. These are then automatically classified using artificial
+                                    intelligence, and can be used to update the dispatching map, or simply
+                                    share provide more information to other units. This functionality could also
+                                    be implemented on on-site drones.
+                                </p>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                                     width="250" height="250"
+                                     src="/static/img/about/picture_classification.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-                </div>
-             </div>
+            </div>
         </div>
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 border-bottom"
+             style="margin-bottom: 30px; margin-top: -20px;"></div>
+
+        <!-- Marketing Messaging
+        ================================================== -->
+        <div id=marketing class="main-carousel">
+            <div class="carousel-cell">
+                <h2 class="featurette-heading">The exciting design of Project AsTeR</h2>
+                <a href="https://medium.com/@merylldin/project-aster-ibm-call-for-code-30d959614be7"
+                   target="_blank">
+                    <img class="w-100"
+                         src='https://api.thumbalizr.com/?api_key={{ thmbl_key }}&url=https://towardsdatascience.com/project-aster-ibm-call-for-code-30d959614be7&width=250'>
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <h2 class="featurette-heading">UC Berkeley writes about AsTeR</h2>
+                <a href="https://ieor.berkeley.edu/meng-alumni-are-finalists-in-ibm-call-for-code-2019-global-prize/"
+                   target="_blank">
+                    <img class="w-100"
+                         src='https://api.thumbalizr.com/?api_key={{ thmbl_key }}&url=https://ieor.berkeley.edu/meng-alumni-are-finalists-in-ibm-call-for-code-2019-global-prize/&width=250'>
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <h2 class="featurette-heading">AsTeR is finalist of IBM Call for Code 2019!</h2>
+                <a href="https://developer.ibm.com/callforcode/projects/"
+                   target="_blank">
+                    <img class="w-100"
+                         src='https://api.thumbalizr.com/?api_key={{ thmbl_key }}&url=https://developer.ibm.com/callforcode/projects/&width=250'>
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <h2 class="featurette-heading">Vote for Project AsTeR on TechCrunch!</h2>
+                <a href="https://techcrunch.com/sponsored/vote-for-your-top-natural-disaster-tech-solution/"
+                   target="_blank">
+                    <img class="w-100"
+                         src='https://api.thumbalizr.com/?api_key={{ thmbl_key }}&url=https://techcrunch.com/sponsored/vote-for-your-top-natural-disaster-tech-solution/&width=250'>
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <h2 class="featurette-heading">An article from the Consumer Technology Association</h2>
+                <a href="https://cta.tech/News/Blog/Articles/2019/May/These-Berkeley-College-Students-Are-Using-Artifici.aspx"
+                   target="_blank">
+                    <img class="w-100"
+                         src='https://api.thumbalizr.com/?api_key={{ thmbl_key }}&url=https://cta.tech/News/Blog/Articles/2019/May/These-Berkeley-College-Students-Are-Using-Artifici.aspx&width=250'>
+                </a>
+            </div>
+            <div class="carousel-cell">
+                <h2 class="featurette-heading">Top five open source Call for Code Solutions</h2>
+                <a href="https://newsroom.ibm.com/2019-09-17-Top-five-open-source-powered-solutions-to-mitigate-the-impact-of-natural-disasters-announced-as-finalists-in-Call-for-Code-global-coding-challenge"
+                   target="_blank">
+                    <img class="w-100"
+                         src='https://api.thumbalizr.com/?api_key={{ thmbl_key }}&url=https://newsroom.ibm.com/2019-09-17-Top-five-open-source-powered-solutions-to-mitigate-the-impact-of-natural-disasters-announced-as-finalists-in-Call-for-Code-global-coding-challenge&width=250'>
+                </a>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 border-bottom"
+             style="margin-bottom: 30px; margin-top: 20px;"></div>
+
+        <!-- CONTACT -->
+        <div id="contact">
+            <div class="box" style="width: 60%;">
+                <div class="container-marketing">
+                    <div class="row">
+                        <div class="col-md-4 col-centered">
+                            <img src="/static/img/contact/marker_1.png" width="45" height="45">
+                            <p>San Francisco, CA, USA</p>
+                        </div>
+                        <div class="col-md-4 col-centered" style="margin-top: 30px; margin-bottom: 50px;">
+
+                            <a class="button" href="#popup1">Contact Us</a>
+
+                        </div>
+                        <div class="col-md-4 col-centered">
+                            <img src="/static/img/contact/enveloppe.png" width="45" height="45">
+                            <p>aster.messages@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <a class="close" href="#home">&times;</a>
+                    <div class="content">
+                        <!-- CONTACT POPUP-->
+                        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center"
+                             align="justify">
+
+                            <h1 class="cover-heading text-center" style="margin-bottom: 20px;">Contact Us</h1>
+
+                            {% for message in form.name.errors %}
+                                <div class="flash">{{ message }}</div>
+                            {% endfor %}
+                            {% for message in form.email.errors %}
+                                <div class="flash">{{ message }}</div>
+                            {% endfor %}
+                            {% for message in form.subject.errors %}
+                                <div class="flash">{{ message }}</div>
+                            {% endfor %}
+                            {% for message in form.message.errors %}
+                                <div class="flash">{{ message }}</div>
+                            {% endfor %}
+
+                            <div class="container-marketing">
+                                <div class="container-marketing">
+                                    <div class="row">
+
+                                        <div class="col-md-10 col-centered">
+                                            <form action="{{ url_for('index') }}" method=post name="contact"
+                                                  role="form">
+                                                <div class="ml-form mb-4 ">
+                                                    {{ form.name(class="form-control", placeholder="Your name", **{'data-validation':'required'}) }}
+                                                </div>
+                                                <div class="md-form mb-4">
+                                                    {{ form.email(class="form-control", placeholder="Your email address", **{'data-validation':'required'}) }}
+                                                </div>
+                                                <div class="md-form mb-4">
+                                                    {{ form.subject(class="form-control", placeholder="Subject ", **{'data-validation':'required'}) }}
+                                                </div>
+                                                <div class="md-form mb-4">
+                                                    {{ form.message(class="form-control", placeholder="Write your message here! Surprise us!", **{'data-validation':'required'}) }}
+                                                </div>
+                                                <div class="mt-4">
+                                                    {{ form.submit(class='btn btn-success') }}
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script>
         $('[data-fancybox]').fancybox({
-            animationDuration : 600,
-            animationEffect   : 'slide-in-out'
+            animationDuration: 600,
+            animationEffect: 'slide-in-out'
         });
         $("#call_analysis").css({'width': '80%', 'height': '95%', background: '#f8f9fd'});
         $("#unit_dispatching").css({'width': '80%', 'height': '95%', background: '#f8f9fd'});
         $("#feedback_integration").css({'width': '80%', 'height': '95%', background: '#f8f9fd'});
 
         $('.main-carousel').flickity({
-          // options
-          groupCells: true,
-          autoPlay: true,
-          wrapAround: true
+            // options
+            groupCells: true,
+            autoPlay: true,
+            wrapAround: true
         });
 
     </script>

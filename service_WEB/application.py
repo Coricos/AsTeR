@@ -10,6 +10,8 @@ with open('configs/config.yaml') as raw: crd = yaml.safe_load(raw)
 SQL_URL = crd['sql_api']
 NLP_URL = crd['nlp_api']
 API_KEY = crd['api_key']
+# THMBL_KEY = crd["thumbalizr_key"]
+THMBL_KEY = "8trFHW38YZ9imMF6lGskzJ6Mdys"
 MAIL_PASSWORD = crd['mail_password']
 
 # Secure application
@@ -49,10 +51,10 @@ def index():
 
     if request.method == 'POST':
         if form.validate() == False:
-            return render_template('home.html', form=form)
+            return render_template('home.html', form=form, thmbl_key=THMBL_KEY)
         else:
-            msg = Message(subject=form.subject.data, sender='aster0project@gmail.com',
-                          recipients=['aster0project@gmail.com'])
+            msg = Message(subject=form.subject.data, sender=form.email.data,
+                          recipients=['aster.messages@gmail.com'])
             msg.body = """
                 From: %s 
                 <%s>
@@ -67,7 +69,7 @@ def index():
             return redirect(url_for('index'))
 
     elif request.method == 'GET':
-        return render_template('home.html', form=form)
+        return render_template('home.html', form=form, thmbl_key=THMBL_KEY)
 
 # About AsTeR
 @application.route('/about')
