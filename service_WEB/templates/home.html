@@ -4,11 +4,11 @@
 {% block body %}
     <script src="/static/includes/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/static/includes/jquery.fancybox.min.js"></script>
-    <script src="/static/includes/flickity.pkgd.js"></script>
+    <script src="/static/includes/flickity.pkgd.min.js"></script>
     <link href="/static/contact.css" rel="stylesheet">
     <link href="/static/home.css" rel="stylesheet">
     <link rel="stylesheet" href="/static/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="/static/flickity.css">
+    <link rel="stylesheet" href="/static/flickity.min.css">
 
     <main>
         <!-- Introduction Carousel
@@ -24,10 +24,11 @@
                 <div class="active carousel-item">
                     <picture>
                         <source media="(min-width: 900px)" srcset="/static/img/home/wildfire_desktop.jpg"
-                                style="height: 100%">
-                        <source media="(min-width: 550px)" srcset="/static/img/home/wildfire_tablet.jpg">
+                                style="width: 100%;">
+                        <source media="(min-width: 550px)" srcset="/static/img/home/wildfire_tablet.jpg"
+                                style="width: 100%;">
                         <img class="first-slide d-block w-80" src="/static/img/home/wildfire_phone.jpg"
-                             style="width: 100%;" alt="Wild Fire" width="414" height="590">
+                             style="width: 100%;" alt="Wild Fire">
                     </picture>
                     <div class="container">
                         <div class="carousel-caption text-left">
@@ -46,7 +47,7 @@
                 <div class="carousel-item">
                     <picture>
                         <source media="(min-width: 900px)" srcset="/static/img/home/modularity_desktop_1.jpg"
-                                style="height: 100%;">
+                                style="width: 100%;">
                         <source media="(min-width: 550px)" srcset="/static/img/home/modularity_tablet_1.jpg"
                                 style="width: 100%;">
                         <img class="second-slide d-block w-80" src="/static/img/home/modularity_phone.jpg"
@@ -65,7 +66,7 @@
                 <div class="carousel-item">
                     <picture>
                         <source media="(min-width: 900px)" srcset="/static/img/home/bulb_desktop_1.jpg"
-                                style="height: 100%;">
+                                style="width: 100%;">
                         <source media="(min-width: 550px)" srcset="/static/img/home/bulb_tablet.jpg"
                                 style="width: 100%;">
                         <img class="third-slide d-block w-80" src="/static/img/home/bulb_phone.jpg"
@@ -226,11 +227,13 @@
         <div id=marketing class="main-carousel">
             <div class="carousel-cell">
                 <h2 class="featurette-heading">The exciting design of Project AsTeR</h2>
-                <a href="https://medium.com/@merylldin/project-aster-ibm-call-for-code-30d959614be7"
-                   target="_blank">
-                    <img class="w-100"
-                         src='https://api.thumbalizr.com/?api_key={{ thmbl_key }}&url=https://towardsdatascience.com/project-aster-ibm-call-for-code-30d959614be7&width=250'>
-                </a>
+                <div class="item active">
+                    <a href="https://medium.com/@merylldin/project-aster-ibm-call-for-code-30d959614be7"
+                       target="_blank">
+                        <img class="w-100"
+                             src='https://api.thumbalizr.com/?api_key={{ thmbl_key }}&url=https://towardsdatascience.com/project-aster-ibm-call-for-code-30d959614be7&width=250'>
+                    </a>
+                </div>
             </div>
             <div class="carousel-cell">
                 <h2 class="featurette-heading">UC Berkeley writes about AsTeR</h2>
@@ -354,7 +357,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 
     <script>
@@ -367,10 +369,10 @@
         $("#feedback_integration").css({'width': '80%', 'height': '95%', background: '#f8f9fd'});
 
         $('.main-carousel').flickity({
-            // options
             groupCells: true,
             autoPlay: true,
-            wrapAround: true
+            wrapAround: true,
+            pauseAutoPlayOnHover: true
         });
 
     </script>

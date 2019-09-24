@@ -38,13 +38,15 @@ main {
 }
 
 .main-carousel {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 
 .carousel-cell {
     width: 40%;
-    height: 350px;
+    max-width: 400px;
+    height: fit-content;
+    max-height: 400px;
     background-color: #f8f9fd;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 20px;
@@ -76,8 +78,11 @@ main {
 .carousel-cell img {
     display: block;
     margin-right: 10px;
-    max-width: 100%;
     height: auto;
+    width: 3vw;
+    top: 0;
+    left: 0;
+    /*min-width: 100%;*/
 }
 
 .carousel-item > img {
@@ -153,11 +158,13 @@ main {
 /* Thin out the marketing headings */
 .featurette-heading {
     font-weight: 300;
-    height: auto;
+    /*height: 4rem;*/
     line-height: 1;
+    font-size: 3vw;
+    max-font-size: 10;
     letter-spacing: -.05rem;
     text-align: center;
-    /*margin-bottom: 0.5em;*/
+    margin-bottom: 0.5em;
 }
 
 /* RESPONSIVE CSS (for mobiles)
