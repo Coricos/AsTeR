@@ -157,14 +157,14 @@ main {
 
 /* Thin out the marketing headings */
 .featurette-heading {
+    font-size: 3vh;
     font-weight: 300;
-    /*height: 4rem;*/
+    height: 4rem;
     line-height: 1;
-    font-size: 3vw;
-    max-font-size: 10;
     letter-spacing: -.05rem;
     text-align: center;
-    margin-bottom: 0.5em;
+    margin: 1rem;
+    vertical-align: middle;
 }
 
 /* RESPONSIVE CSS (for mobiles)
