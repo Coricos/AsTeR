@@ -43,6 +43,7 @@ main {
 }
 
 .carousel-cell {
+    width: 40%;
     max-width: 400px;
     height: fit-content;
     max-height: 400px;
