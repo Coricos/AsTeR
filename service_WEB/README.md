@@ -4,40 +4,6 @@ This submodule specifically will host the Flask interface we develop on AWS. The
 
 > Code Specificity: Using `application.py` as the filename and providing a callable `application` object (the Flask object, in this case) allows Elastic Beanstalk to easily find your application's code.
 
-## SSL Context Generation
-
-```bash
-openssl genrsa 2048 > xxx.key
-openssl req -new -x509 -nodes -sha256 -days 365 -key xxx.key -out xxx.crt
-```
-
-```bash
-Country Name (2 letter code) [AU]:US
-State or Province Name (full name) [Some-State]:California
-Locality Name (eg, city) []:Berkeley
-Organization Name (eg, company) [Internet Widgits Pty Ltd]:AsTeR
-Organizational Unit Name (eg, section) []:serviceWEB
-Common Name (e.g. server FQDN or YOUR name) []:elasticbeanstalk.com
-Email Address []:meryll_dindin@berkeley.edu
-```
-
-```basth
-aws iam upload-server-certificate --server-certificate-name aws-aster --certificate-body file://configs/host_crt.crt --private-key file://configs/host_key.pem
-```
-
-```bash
-{
-    "ServerCertificateMetadata": {
-        "Path": "/",
-        "ServerCertificateName": "aws-aster",
-        "ServerCertificateId": "ASCAXA5BMRBFET2U6OFX7",
-        "Arn": "arn:aws:iam::482985412682:server-certificate/aws-aster",
-        "UploadDate": "2019-07-16T16:57:41Z",
-        "Expiration": "2020-07-15T16:29:19Z"
-    }
-}
-```
-
 ## AWS Elastic Beanstalk
 
 ```bash
