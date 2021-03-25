@@ -36,4 +36,4 @@ watson_developer_cloud==2.10.1
 Werkzeug==0.16.0
 wincertstore==0.2
 WTForms==2.2.1
-PyYAML==5.1.2
+PyYAML==5.4
