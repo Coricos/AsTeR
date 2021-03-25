@@ -3,5 +3,5 @@ numpy==1.16.4
 WTForms==2.2.1
 passlib==1.7.1
 requests==2.21.0
-PyYAML==5.1.1
+PyYAML==5.4
 Flask-Mail==0.9.1
