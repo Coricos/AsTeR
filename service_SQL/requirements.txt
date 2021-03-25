@@ -7,4 +7,4 @@ Flask==1.0.2
 Flask_SQLAlchemy==2.4.0
 numpy==1.16.4
 passlib==1.7.1
-PyYAML==5.1.1
+PyYAML==5.4
